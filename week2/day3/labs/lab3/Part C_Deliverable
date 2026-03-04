@@ -1,0 +1,4 @@
+Deliverable: Show the output of ps aux | grep bash and explain what the columns mean.
+
+We can see all ( a option ) users ( u ) processes , also daemon , background processes with ps command
+grep is used to filter the requests that contain bash 
