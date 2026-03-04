@@ -1,0 +1,9 @@
+This lab included creating several shell scripts to manage files, monitor processes, backup data, and parse logs. I also practiced using safety flags, logging, error handling, and command-line parameters.
+The main scripts I created:
+- common.sh– helper functions for logging, error handling, and checking dependencies.
+- fm_tool.sh– find files by age or pattern, archive or delete them, and apply retention.
+- proc_watch.sh– monitor processes by name, log CPU/memory usage, optionally kill processes exceeding limits.
+- backup.sh– backup directories with timestamp, optional exclusions, verification, and retention.
+- log_parse.sh– parse nginx or syslog files, generate summary outputs (top IPs, errors, programs, etc.).
+
+I also scheduled recurring tasks with cron.
