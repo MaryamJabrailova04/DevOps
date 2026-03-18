@@ -1,0 +1,5 @@
+Scaling is the method that is used for increasing or decreasing the number of virtual machine instances based on demand. There are two main ways to scale:
+Manual Scaling –> You can set the exact number of VM instances you want. You do scaling manually.
+Automatic Scaling –> The system adjusts the number of VM instances automatically based on rules and metrics, such as CPU utilization, memory usage, or incoming traffic.
+For example, if CPU usage exceeds a set threshold for a defined duration, the scale set can automatically add more VM instances for load balancing. 
+Conversely if usage drops, it can remove instances to save resources and cost.
