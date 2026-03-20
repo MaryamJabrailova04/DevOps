@@ -1,0 +1,5 @@
+Task 1: Create a Virtual Network (VNet) and Subnet  : VM is placed in this subnet and will be associated with NAT Gateway.
+Task 2: Create and Configure the NAT Gateway : NAT Gateway will handle outbound traffic from VM without giving public IP.
+Task 3: Associate NAT Gateway with Subnet : This ensures all outbound traffic from the subnet uses the NAT Gateway providing route tables.
+Task 4: Deploy a Virtual Machine (VM) : VM will automatically use NAT Gateway for outbound traffic.
+Task 5: Test Outbound Connectivity : Verify the VM reaches the internet through NAT Gateway.
