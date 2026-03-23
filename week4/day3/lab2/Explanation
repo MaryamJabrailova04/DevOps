@@ -1,1 +1,7 @@
-Include a brief explanation of how the domain name resolution was verified :
+Include a brief explanation of how the domain name resolution was verified (I want to explain it through a website on the browser):
+I type a website name  My browser first checks its own cache If it doesn't find the address there, it asks a DNS resolver 
+If the resolver doesn't know the IP, it contacts one of the 13 Root DNS Servers They point the resolver to the correct Top Level Domain (TLD) server 
+for example : the server for .org domains
+This server doesn't know the final IP, but it tells the resolver which DNS server manages the domain duckdns.org.
+Finally, the resolver asks that server for subdomain devops-maryam.duckdns.org This server replies with the exact IP address 
+The resolver sends it back to my browser and the website loads 
