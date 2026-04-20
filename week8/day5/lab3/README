@@ -1,0 +1,61 @@
+Azure Container Apps Terraform Lab
+This project demonstrates how to provision an Azure Container Apps (ACA) environment using Terraform. The goal is to define all infrastructure as code, making the deployment reproducible, consistent, and easy to manage.
+Instead of creating resources manually in the Azure Portal, everything is handled through Terraform configuration files.
+
+Prerequisites
+* Terraform (version 1.5 or higher)
+* Azure CLI installed
+* An active Azure subscription
+* Logged into Azure: az login
+
+Project Structure
+The project is organized into a few simple files:
+* `providers.tf` – defines the Terraform and Azure provider configuration
+* `main.tf` – contains the main infrastructure resources
+* `variables.tf` – declares input variables
+* `terraform.tfvars` – provides values for variables
+* `outputs.tf` – exposes useful outputs (like the app URL)
+* `README.md` – documentation and usage instructions
+
+What Gets Created
+When you run `terraform apply`, the following resources are provisioned:
+* A Resource Group
+* A Log Analytics Workspace (for logs and monitoring)
+* An Azure Container Apps Environment
+* A Container App running a simple HTTP service (nginx)
+These components work together to host and expose a containerized application.
+
+Configuration
+All configurable values are defined using variables. This makes it easy to reuse the same setup in different environments.
+Some key variables include:
+* `location` – Azure region
+* `container_image` – container image (e.g., nginx)
+* `container_port` – exposed port
+* `min_replicas` / `max_replicas` – scaling configuration
+                            
+How to run
+Initialize Terraform: terraform init
+Validate the configuration: terraform validate
+Preview the changes: terraform plan
+Apply the configuration: terraform apply
+
+Verification
+After deployment completes, Terraform will output the application URL.
+Open the URL in your browser.
+If everything is working correctly, you should see the default nginx page.
+
+Secrets
+A basic secret is defined and injected into the container as an environment variable.
+This is mainly included to demonstrate how sensitive values can be handled more securely compared to hardcoding them directly in configuration.
+
+Idempotency
+Running `terraform plan` again after a successful deployment should result in no changes.
+This confirms that the infrastructure is stable and correctly managed.
+
+Cleanup
+To remove all resources: terraform destroy
+This ensures no unnecessary resources are left running.
+
+                             
+This project is considered for working with Azure Container Apps using Terraform.
+It covers the basic building blocks and can be expanded with features like private registries, networking, and more advanced security.
