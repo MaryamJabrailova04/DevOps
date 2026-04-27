@@ -1,1 +1,8 @@
-
+Create Java app (or get one)
+Test locally
+Dockerize it
+Push image to Docker Hub
+Create Azure Container App
+Create GitHub Actions pipeline
+Deploy automatically
+Verify
